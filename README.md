@@ -1,5 +1,7 @@
 # sample-music-app
 
+[![Build Status](https://travis-ci.org/abhilashlr/sample-music-app.svg?branch=master)](https://travis-ci.org/abhilashlr/sample-music-app)
+
 This is a sample app that experiments with most of the newest ember versions and addons. Simply a playground and possibly a collection of code samples for [ember-titbits Medium publication](https://medium.com/ember-titbits)
 
 ## Prerequisites
