@@ -1,8 +1,7 @@
 import ApplicationSerializer from './application';
 
+const include = ['genre', 'album', 'artists'];
+
 export default ApplicationSerializer.extend({
-  init() {
-    this._super(...arguments);
-    this.includes = ['artists'];
-  },
+  include
 });
