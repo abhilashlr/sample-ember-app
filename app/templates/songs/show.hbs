@@ -1,0 +1,12 @@
+<div class="row" data-test-song>
+  <img src="{{model.cover}}" class="col-sm-3 img-thumbnail">
+  <div class="col-sm-9">
+    <h2>{{model.title}}</h2>
+    <div>
+      {{#each model.artists as |artist|}}
+        <span class="badge badge-secondary">{{artist.name}}</span>
+      {{/each}}
+    </div>
+    {{link-to 'Edit' 'songs.edit' model.id class="btn btn-primary"}}
+  </div>
+</div>

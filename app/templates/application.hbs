@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{link-to 'Sample Music Ap' 'songs' class="navbar-brand"}}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav ml-2">
+      <li class="nav-item active">
+        {{link-to 'Add a song' 'songs.new' class="btn btn-primary"}}
+      </li>
+    </ul>
+  </div>
+  <ul class="navbar-nav float-right">
+    <li class="nav-item">
+      <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Jokeejr Sish
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid pt-3 pb-3">
+  {{outlet}}
+</div>
+
+{{routable-modal-outlet}}

@@ -1,0 +1,40 @@
+<div class="routable-modal--dialog">
+  <div class="routable-modal--content">
+    <div class="routable-modal--header">
+      {{routable-modal-close-button class="routable-modal--close"}}
+      <h4 class="routable-modal--title text-truncate" data-test-modal-title>Edit song - {{model.title}}</h4>
+    </div>
+    <div class="routable-modal--body">
+      <form>
+        <div class="form-group row">
+          <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10" data-test-song-title>
+            {{input type="text" class="form-control" id="inputTitle" aria-describedby="titleHelp" placeholder="Enter song title" value=model.title}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputCover" class="col-sm-2 col-form-label">Cover</label>
+          <div class="col-sm-10" data-test-song-cover>
+            {{input type="text" class="form-control" id="inputCover" aria-describedby="coverHelp" placeholder="Enter cover" value=model.cover}}
+          </div>
+        </div>
+        <div class="form-group" data-test-song-year>
+          <label for="inputYear" class="col-form-label">Year of release</label>
+          {{input type="number" class="form-control" id="inputYear" aria-describedby="yearHelp" placeholder="Enter year of release" value=model.yearOfRelease}}
+        </div>
+        <div class="form-group"  data-test-song-spotify>
+          <label for="inputSpotify" class="col-form-label">Spotify link</label>
+          {{input type="text" class="form-control" id="inputSpotify" aria-describedby="spotifyLinkHelp" placeholder="Enter spotify link" value=model.spotifyLink}}
+        </div>
+        <div class="form-group">
+          <label for="inputArtists" class="col-form-label">Artists</label>
+          {{#power-select-multiple options=artists selected=model.artists onchange=(action 'changeArtists') renderInPlace=true as |artist|}}
+            {{artist.name}}
+          {{/power-select-multiple}}
+        </div>
+        <button type="button" class="btn btn-default" {{action (action 'cancel' model)}}>Cancel</button>
+        <button type="button" class="btn btn-primary float-right" {{action (action 'save' model)}}>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

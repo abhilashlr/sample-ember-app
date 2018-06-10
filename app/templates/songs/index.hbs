@@ -1,0 +1,20 @@
+<div class="row mt-4" data-test-songs>
+  {{#each model as |song|}}
+    <div class="col-lg mb-4">
+      <div class="card">
+        <img class="card-img-top" src="{{song.cover}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title text-truncate">{{song.title}}</h5>
+          <p class="card-text">{{song.genre}}</p>
+          <div class="mb-2">
+            {{#each song.artists as |artist|}}
+              <span class="badge badge-secondary">{{artist.name}}</span>
+            {{/each}}
+          </div>
+          {{link-to 'View' 'songs.show' song.id class="btn btn-primary"}}
+          {{link-to 'Edit' 'songs.edit' song.id class="btn btn-secondary"}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
