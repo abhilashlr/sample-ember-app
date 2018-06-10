@@ -5,7 +5,7 @@
         <img class="card-img-top" src="{{song.cover}}" alt="">
         <div class="card-body">
           <h5 class="card-title text-truncate">{{song.title}}</h5>
-          <p class="card-text">{{song.genre}}</p>
+          <p class="card-text">{{song.genre.title}}</p>
           <div class="mb-2">
             {{#each song.artists as |artist|}}
               <span class="badge badge-secondary">{{artist.name}}</span>
