@@ -43,7 +43,7 @@
     "ember-routable-modal": "0.6.0",
     "ember-source": "3.1.4",
     "ember-welcome-page": "4.0.0",
-    "eslint-plugin-ember": "5.4.0",
+    "eslint-plugin-ember": "8.4.0",
     "loader.js": "4.7.0"
   },
   "engines": {
